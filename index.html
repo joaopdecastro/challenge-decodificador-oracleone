@@ -7,6 +7,10 @@
     <title>Decodificador de Texto</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <!-- Fontes utilzadas -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -15,19 +19,22 @@
     
     <section id="coluna-esquerda">
         <label>
-            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <textarea name="input-text" id="input-text">Digite seu texto</textarea>
         </label>
         
-        <div></div>
-        <button>Criptografar</button>
-        <button>Descriptografar</button>
+        <div><img src="media/aviso_16x16px.png" alt="Símbolo de interrogação indicando um aviso" id="img-aviso"><p id="texto-aviso">Apenas letras minúsculas e sem acento.</p></div>
+        
+        <div id="grid-buttons">
+            <button id="button-criptografar">Criptografar</button>
+            <button id="button-descriptografar">Descriptografar</button>
+        </div>
     </section>
 
     <section id="coluna-direita">
         <label>
-            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <textarea name="texto-criptografado" id="texto-criptografado" cols="30" rows="10" readonly>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto eum quo quos unde reprehenderit quis, nobis in distinctio nulla doloribus molestiae! Eaque blanditiis facere ab fugit sapiente eius, quae doloribus.</textarea>
         </label>
-        <button>Copiar</button>
+        <button id="button-copiar">Copiar</button>
     </section>
 
     <!-- <footer>
