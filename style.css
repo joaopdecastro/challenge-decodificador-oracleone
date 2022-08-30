@@ -43,7 +43,7 @@ textarea {
     resize: none;
 }
 
-#coluna-esquerda {
+.coluna-esquerda {
     padding: 40px 80px 40px 0;
     display: grid;
     grid-template-columns: 1fr;
@@ -53,7 +53,6 @@ textarea {
 #input-text {
     width: 100%;
     height: 100%;
-    margin-bottom: 100px;
     background-color: var(--cor1);
     border: none;
     font-family: 'Inter', sans-serif;
@@ -68,7 +67,6 @@ textarea {
     grid-template-rows: 1fr;
     margin: auto;
     column-gap: 10px;
-    position: relative;
 }
 
 #button-criptografar {
@@ -184,11 +182,13 @@ textarea {
     background-color: var(--cor5);
 }
 
+/* Configurações de responsividade */
+
 @media (max-width: 1200px) {
     main {
         display: flex;
         flex-flow: column;
-        height: 1045px;
+        height: calc(100vh - 130px);
         padding: 40px 80px 80px;
     }
 
@@ -206,7 +206,7 @@ textarea {
     }
 
 
-    #coluna-esquerda {
+    .coluna-esquerda {
         padding: 40px 0;
     }
 }
@@ -219,7 +219,7 @@ textarea {
     main {
         display: flex;
         flex-flow: column;
-        height: 100vh;
+        height: calc(100vh - 80px);
         padding: 15px 24px 24px;
     }
 
@@ -231,9 +231,24 @@ textarea {
         flex: 2.5;
     }
 
-    #coluna-esquerda {
+    .coluna-esquerda {
         padding: 40px 0;
     }
+
+    .coluna-esquerda {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 16px 144px;
+    }
+
+    #grid-buttons {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        margin: auto;
+        column-gap: 10px;
+    }    
 
     #button-criptografar {
         background-color: var(--cor3);

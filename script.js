@@ -1,3 +1,4 @@
+//Funções que atualizam a tela de mensagem
 function telaSemTexto () {
     let output = document.getElementById('output')
     let botaoCopiar = document.getElementById('button-copiar')
@@ -13,6 +14,7 @@ function telaComTexto() {
 
     semTexto.style.display = 'none'
 }
+
 
 var textoCriptografado = document.getElementById('texto-criptografado')
 
