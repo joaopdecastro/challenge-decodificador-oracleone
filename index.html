@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script async src="script.js"></script>
 </head>
 <body>
     <header>
@@ -30,11 +31,22 @@
                 <button id="button-descriptografar">Descriptografar</button>
             </div>
         </section>
-        <section id="coluna-direita">
-            <label>
-                <textarea name="texto-criptografado" id="texto-criptografado" cols="30" rows="10" readonly>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto eum quo quos unde reprehenderit quis, nobis in distinctio nulla doloribus molestiae! Eaque blanditiis facere ab fugit sapiente eius, quae doloribus.</textarea>
+        <section class="coluna-direita">
+            <label id="output">
+                <textarea name="texto-criptografado" id="texto-criptografado" cols="30" rows="10" readonly></textarea>
             </label>
             <button id="button-copiar">Copiar</button>
+
+            
+            <!-- Se não existir texto-->
+            <div id="sem-texto">
+                <div id="container">
+                    <img src="media/text-none-336_304px.png" alt="Pessoa olhando um diamante através de uma lupa" id="img-lupa">
+                </div>
+                <h3>Nenhuma mensagem encontrada</h3>
+                <p>Digite um texto que você deseja criptografar ou descriptografar</p>
+            </div>
+
         </section>
     </main>
 
