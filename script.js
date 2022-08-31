@@ -40,7 +40,7 @@ function criptografar () {
         
     }
    
-    output.innerText = resultado
+    output.innerHTML = resultado
 
     telaComTexto()
 }
@@ -85,6 +85,18 @@ function descriptografar () {
 
 }
 
+function copiar() {
+
+    let recebeCopia = document.getElementById('texto-criptografado').innerHTML
+
+    navigator.clipboard.writeText(recebeCopia)
+
+    .then(() => {
+        alert('Texto copiado com sucesso!')
+    })
+
+}
+
 var input = document.getElementById('input-text')
 var output = document.getElementById('texto-criptografado')
 var resultado
@@ -96,5 +108,9 @@ buttonCripto.onclick = criptografar
 
 var buttonDescripto = document.getElementById('button-descriptografar')
 buttonDescripto.onclick = descriptografar
+
+var buttonCopiar = document.getElementById('button-copiar')
+buttonCopiar.onclick = copiar
+
 
 
