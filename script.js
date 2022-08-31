@@ -45,20 +45,56 @@ function criptografar () {
     telaComTexto()
 }
 
+//Funções para verificar cada letra da chave de criptografia
+
+function verificaE (parametro) {
+    var resultado = parametro.replaceAll('enter', 'e')
+    return resultado
+}
+
+function verificaI (parametro) {
+    var resultado = parametro.replaceAll('imes', 'i')
+    return resultado
+}
+
+function verificaA (parametro) {
+    var resultado = parametro.replaceAll('ai', 'a')
+    return resultado
+}
+
+function verificaO (parametro) {
+    var resultado = parametro.replaceAll('ober', 'o')
+    return resultado
+}
+
+function verificaU (parametro) {
+    var resultado = parametro.replaceAll('ufat', 'u')
+    return resultado
+}
+
 function descriptografar () {
 
-//criar função
+    let resultado = verificaE(input.value)
+    resultado = verificaI(resultado)
+    resultado = verificaA(resultado)
+    resultado = verificaO(resultado)
+    resultado = verificaU(resultado)
+
+    output.innerText = resultado
+    telaComTexto()
 
 }
 
 var input = document.getElementById('input-text')
 var output = document.getElementById('texto-criptografado')
+var resultado
 
 telaSemTexto()
 
 var buttonCripto = document.getElementById('button-criptografar')
 buttonCripto.onclick = criptografar
 
-
+var buttonDescripto = document.getElementById('button-descriptografar')
+buttonDescripto.onclick = descriptografar
 
 
