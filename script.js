@@ -20,67 +20,39 @@ function telaComTexto() {
 
 function criptografar () {
 
-    let resultado = ''
+    /* A ideia da função é criar uma matriz de chaves e ver se na palavra inserida há a chave 0. Se houver, trocar pela chave 1 */
 
-    for (let i = 0; i < input.value.length; i++) {
+    let textInput = input.value
+    let matrizCripto = [['e','enter'],['i','imes'],['a','ai'],['o','ober'],['u','ufat']]
+    textInput = textInput.toLowerCase()
 
-        if (input.value[i] == 'e') {
-            resultado = resultado + 'enter'
-        } else if (input.value[i] == 'i') {
-            resultado = resultado + 'imes'
-        } else if (input.value[i] == 'a') {
-            resultado = resultado + 'ai'
-        } else if (input.value[i] == 'o') {
-            resultado = resultado + 'ober'
-        } else if (input.value[i] == 'u') {
-            resultado = resultado + 'ufat'
-        }else {
-            resultado = resultado + input.value[i]
+    for(let i = 0;i < matrizCripto.length; i++) {
+
+        if(textInput.includes(matrizCripto[i][0])) {
+            textInput = textInput.replaceAll(matrizCripto[i][0], matrizCripto[i][1])
         }
-        
     }
-   
-    output.innerHTML = resultado
+
+    output.innerHTML = textInput
 
     telaComTexto()
 }
 
-//Funções para verificar cada letra da chave de criptografia
-
-function verificaE (parametro) {
-    var resultado = parametro.replaceAll('enter', 'e')
-    return resultado
-}
-
-function verificaI (parametro) {
-    var resultado = parametro.replaceAll('imes', 'i')
-    return resultado
-}
-
-function verificaA (parametro) {
-    var resultado = parametro.replaceAll('ai', 'a')
-    return resultado
-}
-
-function verificaO (parametro) {
-    var resultado = parametro.replaceAll('ober', 'o')
-    return resultado
-}
-
-function verificaU (parametro) {
-    var resultado = parametro.replaceAll('ufat', 'u')
-    return resultado
-}
-
 function descriptografar () {
 
-    let resultado = verificaE(input.value)
-    resultado = verificaI(resultado)
-    resultado = verificaA(resultado)
-    resultado = verificaO(resultado)
-    resultado = verificaU(resultado)
+    let textInput = input.value
+    let matrizCripto = [['e','enter'],['i','imes'],['a','ai'],['o','ober'],['u','ufat']]
+    textInput = textInput.toLowerCase()
 
-    output.innerText = resultado
+    for(let i = 0;i < matrizCripto.length; i++) {
+
+        if(textInput.includes(matrizCripto[i][1])) {
+            textInput = textInput.replaceAll(matrizCripto[i][1], matrizCripto[i][0])
+        }
+    }
+
+    output.innerHTML = textInput
+
     telaComTexto()
 
 }
@@ -99,7 +71,6 @@ function copiar() {
 
 var input = document.getElementById('input-text')
 var output = document.getElementById('texto-criptografado')
-var resultado
 
 telaSemTexto()
 
@@ -111,6 +82,3 @@ buttonDescripto.onclick = descriptografar
 
 var buttonCopiar = document.getElementById('button-copiar')
 buttonCopiar.onclick = copiar
-
-
-
