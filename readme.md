@@ -9,12 +9,16 @@ Ferramenta de encriptação de textos.
 | -------------  | --- |
 | :sparkles: Nome        | **Encriptador de Textos**
 | :label: Tecnologias | html, CSS, javascript
-| :rocket: URL         | https://url-deploy.com.br
+| :rocket: URL         | https://joaopdecastro.github.io/challenge-decodificador-oracleone/
 | :fire: Desafio     | 
 
 <!-- Inserir imagem com a #vitrinedev ao final do link -->
-![](https://via.placeholder.com/1200x500.png?text=imagem+lindona+do+meu+projeto#vitrinedev)
+![](media/img-deploy.jpeg#vitrinedev)
 
 ## Detalhes do projeto
 
-Textos e imagens que descrevam seu projeto, suas conquistas, seus desafios, próximos passos, etc...
+Projeto desenvolvido dentro do programa Oracle One Next Education, da Alura em parceria com a Oracle.
+
+Na parte HTML e CSS utilizei conceitos de responsividade(media query), flex box e CSS grid.
+
+O JavaScript foram utilizados operadores aritméticos, lógicos, arrays e manipulação da árvore DOM.
